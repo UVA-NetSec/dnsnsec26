@@ -18,7 +18,6 @@ stats = pd.DataFrame()
 for zone in zones:
     print("Processing Zone:", zone)
     datadir = f"{PROBROOT}/{zone}/{datestr}/www_scan_nsec_parsed"
-    #savedir = f"/p/keyinfra/nsecdata/openintel/processed/{datestr}/{zone}"
     resdir = f"res"
 
     os.makedirs(resdir, exist_ok=True)
