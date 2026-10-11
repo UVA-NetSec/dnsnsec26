@@ -27,7 +27,7 @@ def filterdf(files, filtered_col, fcol, fstr):
 stats = pd.DataFrame()
 for zone in zones:
     print("Processing Zone:", zone)
-    datadir = f"{PROBROOT}/{zone}/{datestr}/"
+    datadir = f"{PROBROOT}/processed/{zone}/{datestr}/"
     resdir = f"res"
     os.makedirs(resdir, exist_ok=True)
     

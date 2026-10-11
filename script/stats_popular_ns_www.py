@@ -39,8 +39,7 @@ def get_popular_ns(df, datatype="sub"):
 stats = pd.DataFrame()
 for zone in zones:
     print("Processing Zone:", zone)
-    datadir = f"{PROBROOT}/{zone}/{datestr}/"
-    savedir = f"{PROBROOT}/{zone}/{datestr}/"
+    savedir = f"{PROBROOT}/processed/{zone}/{datestr}/"
     resdir = f"res/wwwNSes"
     os.makedirs(resdir, exist_ok=True)
 
