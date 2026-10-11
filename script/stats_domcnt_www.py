@@ -5,6 +5,7 @@ import glob
 import dns.dnssec
 import pyarrow
 import dns.name
+from config import *
 
 
 """
@@ -23,7 +24,7 @@ for zone in zones:
     os.makedirs(resdir, exist_ok=True)
     fl = glob.glob(os.path.join(datadir, "nsec_afsdb*.parquet"))
     fl.sort()
-    with open(f"/p/keyinfra/nsecdata/openintel/processed/{datestr}/{zone}/{datestr}_dnskey_names.txt", "r") as file:
+    with open(f"{DATAROOT}/processed/{datestr}/{zone}/{datestr}_dnskey_names.txt", "r") as file:
         doml = file.readlines()
     dnskey_cnt = len(doml)
     dnskey_dom = set([dom.rstrip("\n").rstrip(".") for dom in doml])

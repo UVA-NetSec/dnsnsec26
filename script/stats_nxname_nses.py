@@ -7,6 +7,8 @@ import pyarrow
 import dns.name
 import tldextract
 import re
+from config import *
+
 
 datestr = "20260406"
 zones = ["com", "net", "org", 'umbrella','tranco','radar','majestic']
