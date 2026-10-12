@@ -16,8 +16,8 @@ zones = ["com", "net", "org", 'umbrella','tranco','radar','majestic']
 stats = pd.DataFrame()
 for zone in zones:
     print(zone)
-    nsec = pd.read_parquet(f"{PROBROOT}/processed/{zone}/{datestr}/{datestr}_www_nsec_namedist.parquet", columns=["query_name", "status"])
-    nsec3 = pd.read_parquet(f"{PROBROOT}/processed/{zone}/{datestr}/{datestr}_www_nsec3_namedist.parquet", columns=["query_name", "status"])
+    nsec = pd.read_parquet(f"{PROBROOT}/processed/{zone}/{datestr}/{datestr}_www_nsec_namedist_final.parquet", columns=["query_name", "status"])
+    nsec3 = pd.read_parquet(f"{PROBROOT}/processed/{zone}/{datestr}/{datestr}_www_nsec3_namedist_final.parquet", columns=["query_name", "status"])
     
     tnsec = nsec.drop_duplicates(["query_name"])
     tnsec3 = nsec3.drop_duplicates(["query_name"])
