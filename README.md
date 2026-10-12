@@ -83,6 +83,10 @@ All stats filenames below are relative to `script/res/`. All producer commands u
 | **Figure 3: Joint NSEC name-distance density** | Run `python process_strdistance*.py` from `script/`, then run the **NSEC Distance** section of [figure_openintel_strdistance_plot.ipynb](notebook/figure_openintel_strdistance_plot.ipynb) | External source `.com` distance Parquet. Set the notebook's `DATAROOT` and correct its input filename as described below. Produces NODATA/NXDOMAIN panels; paper layout and red annotations need manual assembly. |
 | **Figure 6: NSEC3 interval-distance ECDF** | Run `python process_strdistance_nsec3.py` from `script/`, then run the **NSEC3 Distance** section of [figure_openintel_strdistance_plot.ipynb](notebook/figure_openintel_strdistance_plot.ipynb) | External source `.com` NSEC3 distance Parquet. Set `DATAROOT`, correct filename, and explicitly decide how to handle zero distances on the log axis. |
 
+### Table 9 correction
+---
+Table 9 correction: The original paper interchanged the NSEC3 NODATA and NXDOMAIN percentages for Umbrella, Tranco, Radar, and Majestic due to initial excel copy and paste error. Swap the two values within each of these four rows, correcting eight cells in total. The reproduction notebook uses the correct column assignments. 
+
 ## Obtain initial raw data
 
 ### OpenINTEL snapshot
