@@ -52,6 +52,6 @@ print(stats)
 
 os.makedirs("res", exist_ok=True)
 stats.to_csv(
-    f"res/{datestr}_www_nodata_nxname_ratio.csv",
+    f"res/{datestr}_wildcard_nodata_nxname_ratio.csv",
     index=False,
 )
